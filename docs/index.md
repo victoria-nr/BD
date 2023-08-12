@@ -1,10 +1,11 @@
 ﻿#### Apunts dels mòduls Accés a Dades i Bases de Dades
 ## BD
-[Tema 1: Introducció](index.md)
+   
+![Tema 1: Introducció](index.md)
 
-[Tema 2: Model E/R](/BD-T02_Model_E-R/index.md)
+![Tema 2: Model E/R](BD-T02_Model_E-R/index.md)
 
-[Tema 3: Model Relacional](BD/docs/BD-T03_Model_Relacional/index.md)
+[Tema 3: Model Relacional](BD-T03_Model_Relacional/index.md)
 
 [Tema 4: Normalització](BD-T04_Normalitzacio/index.md)
 

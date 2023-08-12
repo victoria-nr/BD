@@ -1,1 +1,6 @@
-site_name: My Docs
+site_name: BD - Baese de Datos
+theme: 
+  name: material
+  logo: assets/logocaminas.png
+extra_css:
+  - stylesheets/extra.css
