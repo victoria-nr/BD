@@ -1,6 +1,42 @@
-site_name: BD - Baese de Datos
+# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
+
+site_name: BD - Bases de Datos
 theme: 
   name: material
   logo: assets/logocaminas.png
+  features:
+    #- navigation.tabs
+    #- navigation.sections
+      - navigation.path
+    #- navigation.expand
+      - navigation.indexes
+      - toc.integrate
+      - search.highlight
+      - content.code.annotation
+      - content.code.copy  
 extra_css:
   - stylesheets/extra.css
+nav:
+  - Tema 1-Introducció:
+    - Objectius: BD-T01_Introduccio/objectius.md
+    - 1. Fitxers tradicionals: BD-T01_Introduccio/1_fitxers_tradicionals.md
+    - 2. Concepte de Base de Dades: BD-T01_Introduccio/2_concepte_de_base_de_dades.md
+    - 3. Característiques desitjables d'un SGBD: BD-T01_Introduccio/3_caracterstiques_desitjables_dun_sgbd.md
+    - 4. Models de dades: BD-T01_Introduccio/4_models_de_dades.md
+    - 5. Arquitectura a 3 nivells: BD-T01_Introduccio/5_arquitectura_a_3_nivells.md
+    - 6. Llenguatges del SGBD: BD-T01_Introduccio/6_llenguatges_del_sgbd.md
+    - 7. Classificacions dels SGBD: BD-T01_Introduccio/7_classificacions_dels_sgbd.md
+    - Autoavaluació: BD-T01_Introduccio/autoavaluaci.md
+  - Tema 2-Model E/R: BD-T02_Model_E-R/index.md
+  - Tema 3- Model Relacional: BD-T03_Model_Relacional/index.md
+  - Tema 4- Normalització: BD-T04_Normalitzacio/index.md
+  - Tema 5- Annex Base: BD-T05_Annex_Base/index.md
+  - Tema 5- Annex Access: BD-T05_Annex_Access/index.md
+  - Tema 6- SQL I: BD-T06_SQL_I_PostgreSQL/index.md
+  - Tema 6- SQL II]: BD-T06_SQL_II_PostgreSQL/index.md  
+  - Tema 6- SQL III: (BD-T06_SQL_III_PostgreSQL/index.md
+  - Tema 7- PLpgSQL: (BD-T07_PLpgSQL/index.md
+  - Tema 8- BD NoSQL: (BD-T08_BD_NoSQL/index.md)
+
+
+   
