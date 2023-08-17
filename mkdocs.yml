@@ -5,8 +5,9 @@ theme:
   name: material
   logo: assets/logocaminas.png
   features:
-    #- navigation.tabs
-    #- navigation.sections
+    #  - navigation.tabs
+    #  - navigation.sections
+      - navigation.top
       - navigation.path
     #- navigation.expand
       - navigation.indexes
