@@ -1,0 +1,639 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
+    
+    
+      
+        <title>22 quan executar una macro esdeveniments - BD - Bases de Datos</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.eebd395e.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#22-quan-executar-una-macro-esdeveniments" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="BD - Bases de Datos" class="md-header__button md-logo" aria-label="BD - Bases de Datos" data-md-component="logo">
+      
+  <img src="../../assets/logocaminas.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            BD - Bases de Datos
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              22 quan executar una macro esdeveniments
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="BD - Bases de Datos" class="md-nav__button md-logo" aria-label="BD - Bases de Datos" data-md-component="logo">
+      
+  <img src="../../assets/logocaminas.png" alt="logo">
+
+    </a>
+    BD - Bases de Datos
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          Tema 1-Introducció
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Tema 1-Introducció
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T01_Introduccio/objectius/" class="md-nav__link">
+        Objectius
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T01_Introduccio/1_fitxers_tradicionals/" class="md-nav__link">
+        1. Fitxers tradicionals
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T01_Introduccio/2_concepte_de_base_de_dades/" class="md-nav__link">
+        2. Concepte de Base de Dades
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T01_Introduccio/3_caracterstiques_desitjables_dun_sgbd/" class="md-nav__link">
+        3. Característiques desitjables d'un SGBD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T01_Introduccio/4_models_de_dades/" class="md-nav__link">
+        4. Models de dades
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T01_Introduccio/5_arquitectura_a_3_nivells/" class="md-nav__link">
+        5. Arquitectura a 3 nivells
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T01_Introduccio/6_llenguatges_del_sgbd/" class="md-nav__link">
+        6. Llenguatges del SGBD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T01_Introduccio/7_classificacions_dels_sgbd/" class="md-nav__link">
+        7. Classificacions dels SGBD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T01_Introduccio/autoavaluaci/" class="md-nav__link">
+        Autoavaluació
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T02_Model_E-R/" class="md-nav__link">
+        Tema 2-Model E/R
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T03_Model_Relacional/" class="md-nav__link">
+        Tema 3- Model Relacional
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T04_Normalitzacio/" class="md-nav__link">
+        Tema 4- Normalització
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Tema 5- Annex Base
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T05_Annex_Access/" class="md-nav__link">
+        Tema 5- Annex Access
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T06_SQL_I_PostgreSQL/" class="md-nav__link">
+        Tema 6- SQL I
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T06_SQL_II_PostgreSQL/" class="md-nav__link">
+        Tema 6- SQL II]
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../(BD-T06_SQL_III_PostgreSQL/index.md" class="md-nav__link">
+        Tema 6- SQL III
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../(BD-T07_PLpgSQL/index.md" class="md-nav__link">
+        Tema 7- PLpgSQL
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../(BD-T08_BD_NoSQL/index.md)" class="md-nav__link">
+        Tema 8- BD NoSQL
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p>Bases de Dades</p>
+<ul>
+<li><a href="../">Tema 5 (annex): Base avançat</a></li>
+<li><a href="../objectius/">Objectius</a></li>
+<li><a href="../part_i_prctica_inicial/">Part I: Pràctica inicial</a> </li>
+<li><a href="../11_taules/">1.1 Taules</a></li>
+<li><a href="../12_consultes/">1.2 Consultes</a></li>
+<li><a href="../13_formularis_i_informes/">1.3 Formularis i Informes</a></li>
+<li><a href="../part_ii_macros_voluntari/">Part II: Macros (Voluntari)</a> </li>
+<li><a href="../21_creaci_i_execuci_directa_duna_macro/">2.1 Creació i execució directa d'una Macro</a></li>
+<li><a href="./">2.2 Quan executar una macro: esdeveniments</a></li>
+<li><a href="../23_obrir_automticament_un_formulari/">2.3 Obrir automàticament un formulari</a></li>
+<li><a href="../24_exemple_avanat_compliment_de_restriccions_externes/">2.4 Exemple avançat: compliment de restriccions externes</a></li>
+</ul>
+<p><a href="../21_creaci_i_execuci_directa_duna_macro/">« Anterior</a> | <a href="../23_obrir_automticament_un_formulari/">Següent »</a></p>
+<h1 id="22-quan-executar-una-macro-esdeveniments"><a name="main"></a><strong>2.2 Quan executar una macro: esdeveniments</strong></h1>
+<p>L'anterior manera d'executar les macros és la més senzilla, però no és l'habitual, no és gens pràctica.</p>
+<p>El més habitual és executar la macro en produir-se un <strong>esdeveniment</strong> (evento , event): quan apretem un botó, en actualitzar-se algun camp d'un formulari, quan visualitzem un nou registre...</p>
+<p>La llista d'esdeveniments és molt llarga, i en aquest annex que té una pretensió merament introductòria només veurem uns pocs esdeveniments.</p>
+<p>Per a poder fer la primera prova, anem a crear un nou formulari que anomenarem <strong>Menú principal</strong> per motius que veurem després.</p>
+<p>En aquest formulari posarem un botó <strong>(Botó per prémer</strong>) i fem doble-clic sobre ell per a anar a les propietats del botó. Posarem l'etiqueta <strong>Saludar</strong>, i en la pestanya <strong>Esdeveniments</strong> apretarem als 3 puntets que estan al costat de <strong>Aprova l'acció</strong>, per a triar l'única macro que tenim de moment: <strong>Saludar</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><img alt="ref1" src="22_quan_executar_una_macro_esdeveniments.002.png" /></th>
+<th style="text-align: left;"><img alt="ref1" src="22_quan_executar_una_macro_esdeveniments.002.png" /></th>
+<th style="text-align: left;"><img alt="ref2" src="22_quan_executar_una_macro_esdeveniments.003.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Per a poder comprovar-ho hem d'anar al mode d'execució del formulari, abandonant el mode d'edició.</p>
+<p>Per a fer més útil aquest formulari, intentarem posar un botó per a poder anar a cadascun dels formularis que hem creat per a les diferents taules També posarem un botó per a eixir de LibreOffice Base.</p>
+<p>Prèviament haurem de crear les macros per a poder anar a cadascun dels formularis i per a eixir. L'acció serà <strong>open</strong> sobre el formulari, que primer hem de buscar. L'acció d'eixir serà <strong>Close(True)</strong> sobre el document que és aquesta Base de Dades.</p>
+<p>Copieu-vos el següent codi dins del <strong>Module1</strong> de <strong>Empresa.odb</strong>, on teniu ja la macro de saludar. Recordeu que per a anar al codi de VisualBasic heu de fer  <strong>Eines -&gt; Macros -&gt; Organitza les macros -&gt; Basic</strong>. Hem posat també la macro <strong>Saludar</strong> (només ha d'estar una vegada, clar)</p>
+<p>Sub Saludar</p>
+<p><code></code>print("Hola")</p>
+<p>End Sub</p>
+<p>Sub obrirDepartament</p>
+<p><code></code>ThisDatabaseDocument.FormDocuments.getbyname("DEPARTAMENT").open</p>
+<p>End Sub</p>
+<p>Sub obrirEmpleatFamiliar</p>
+<p><code></code>ThisDatabaseDocument.FormDocuments.getbyname("EMPLEAT-FAMILIAR").open</p>
+<p>End Sub</p>
+<p>Sub obrirProjecte</p>
+<p><code></code>ThisDatabaseDocument.FormDocuments.getbyname("PROJECTE").open</p>
+<p>End Sub</p>
+<p>Sub obrirTreballa</p>
+<p><code></code>ThisDatabaseDocument.FormDocuments.getbyname("Treballa").open</p>
+<p>End Sub</p>
+<p>Sub eixir</p>
+<p><code></code>ThisDatabaseDocument.Close(True)</p>
+<p>End Sub</p>
+<p>A continuació, heu de modificar el botó que ja teniu per a posar-li l'etiqueta <strong>DEPARTAMENT</strong> i canviar la macro de quan s'apreta el botó (esdeveniment Aprova l'acció) per la macro <strong>obrirDepartament</strong>.</p>
+<p>Després haureu de crear 3 botons més per a obrir els altres 3 formularis, i un altre botó per a eixir (macro <strong>eixir</strong>).</p>
+<p>Aquest podria ser l'aspecte del formulari:</p>
+<p><img alt="ref3" src="22_quan_executar_una_macro_esdeveniments.004.png" /></p>
+<p><strong>NOTA</strong></p>
+<p>Heu de cuidar que en el codi de les macros heu posat el formulari que voleu obrir <strong>EXACTAMENT IGUAL</strong> que el nom real que li heu donat al formulari. Per exemple, si el formulari es diu <strong>Treballa</strong> i en la macro hem posat </p>
+<p><strong>Sub obrirTreballa
+<code></code>ThisDatabaseDocument.FormDocuments.getbyname("TREBALLA").open
+End Sub</strong></p>
+<p>És a dir, que el nom és només amb la primera majúscula, però en la macro ho hem posat tot amb majúscules.</p>
+<p>Ens apareixerà el següent error:</p>
+<p><img alt="ref4" src="22_quan_executar_una_macro_esdeveniments.005.png" /></p>
+<p><a href="../21_creaci_i_execuci_directa_duna_macro/">« Anterior</a> | <a href="../23_obrir_automticament_un_formulari/">Següent »</a></p>
+<p>Llicenciat sota la <a href="http://creativecommons.org/licenses/by-nc-nd/2.5/">Llicència Creative Commons Reconeixement NoComercial SenseObraDerivada 2.5</a>
+<strong>Created with an evaluation copy of Aspose.Words. To discover the full versions of our APIs please visit: https://products.aspose.com/words/</strong></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.path", "navigation.indexes", "toc.integrate", "search.highlight", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+    
+  </body>
+</html>

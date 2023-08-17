@@ -1,0 +1,659 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
+    
+    
+      
+        <title>21 creaci duna macro - BD - Bases de Datos</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.eebd395e.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#21-creacio-duna-macro" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="BD - Bases de Datos" class="md-header__button md-logo" aria-label="BD - Bases de Datos" data-md-component="logo">
+      
+  <img src="../../assets/logocaminas.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            BD - Bases de Datos
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              21 creaci duna macro
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="BD - Bases de Datos" class="md-nav__button md-logo" aria-label="BD - Bases de Datos" data-md-component="logo">
+      
+  <img src="../../assets/logocaminas.png" alt="logo">
+
+    </a>
+    BD - Bases de Datos
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          Tema 1-Introducció
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Tema 1-Introducció
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T01_Introduccio/objectius/" class="md-nav__link">
+        Objectius
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T01_Introduccio/1_fitxers_tradicionals/" class="md-nav__link">
+        1. Fitxers tradicionals
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T01_Introduccio/2_concepte_de_base_de_dades/" class="md-nav__link">
+        2. Concepte de Base de Dades
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T01_Introduccio/3_caracterstiques_desitjables_dun_sgbd/" class="md-nav__link">
+        3. Característiques desitjables d'un SGBD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T01_Introduccio/4_models_de_dades/" class="md-nav__link">
+        4. Models de dades
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T01_Introduccio/5_arquitectura_a_3_nivells/" class="md-nav__link">
+        5. Arquitectura a 3 nivells
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T01_Introduccio/6_llenguatges_del_sgbd/" class="md-nav__link">
+        6. Llenguatges del SGBD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T01_Introduccio/7_classificacions_dels_sgbd/" class="md-nav__link">
+        7. Classificacions dels SGBD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T01_Introduccio/autoavaluaci/" class="md-nav__link">
+        Autoavaluació
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T02_Model_E-R/" class="md-nav__link">
+        Tema 2-Model E/R
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T03_Model_Relacional/" class="md-nav__link">
+        Tema 3- Model Relacional
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T04_Normalitzacio/" class="md-nav__link">
+        Tema 4- Normalització
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T05_Annex_Base/" class="md-nav__link">
+        Tema 5- Annex Base
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Tema 5- Annex Access
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T06_SQL_I_PostgreSQL/" class="md-nav__link">
+        Tema 6- SQL I
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T06_SQL_II_PostgreSQL/" class="md-nav__link">
+        Tema 6- SQL II]
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../(BD-T06_SQL_III_PostgreSQL/index.md" class="md-nav__link">
+        Tema 6- SQL III
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../(BD-T07_PLpgSQL/index.md" class="md-nav__link">
+        Tema 7- PLpgSQL
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../(BD-T08_BD_NoSQL/index.md)" class="md-nav__link">
+        Tema 8- BD NoSQL
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p>Bases de Dades</p>
+<ul>
+<li><a href="../">Tema 5 (annex): Access avançat</a></li>
+<li><a href="../objectius/">Objectius</a></li>
+<li><a href="../part_i_prctica_inicial/">Part I: Pràctica inicial</a> </li>
+<li><a href="../11_taules/">1.1 Taules</a></li>
+<li><a href="../12_consultes/">1.2 Consultes</a></li>
+<li><a href="../13_formularis_i_informes/">1.3 Formularis i Informes</a></li>
+<li><a href="../part_ii_macros/">Part II: Macros</a> </li>
+<li><a href="./">2.1 Creació d'una Macro</a></li>
+<li><a href="../22_accions_mltiples/">2.2 Accions múltiples</a></li>
+<li><a href="../23_submacros/">2.3 Submacros</a></li>
+<li><a href="../24_condicions/">2.4 Condicions</a></li>
+<li><a href="../25_resum_daccions/">2.5 Resum d'accions</a></li>
+<li><a href="../26_resum_desdeveniments/">2.6 Resum d'esdeveniments</a></li>
+<li><a href="../part_iii_mduls_visual_basic/">Part III: Mòduls (Visual Basic)</a> </li>
+<li><a href="../31_creaci_dun_mdul/">3.1 Creació d'un Mòdul</a></li>
+<li><a href="../32_tipus_de_dades_constants_i_variables/">3.2 Tipus de dades, Constants i Variables</a></li>
+<li><a href="../33_tipus_especials/">3.3 Tipus especials</a></li>
+<li><a href="../34_operadors/">3.4 Operadors</a></li>
+<li><a href="../35_funcions_i_procediments/">3.5 Funcions i Procediments</a></li>
+<li><a href="../36_sentncies/">3.6 Sentències</a></li>
+<li><a href="../37_funcions_estndard/">3.7 Funcions estàndard</a></li>
+<li><a href="../38_objectes_especials_propietats_i_mtodes/">3.8 Objectes especials: propietats i mètodes</a></li>
+<li><a href="../part_iv_configurar_laspecte/">Part IV: Configurar l'aspecte</a> </li>
+<li><a href="../41_configurar_la_barra_daccs_rpid/">4.1 Configurar la Barra d'Accés ràpid</a> <ul>
+<li><a href="../exercici_41/">Exercici 4.1</a></li>
+</ul>
+</li>
+<li><a href="../42_la_cinta_dopcions/">4.2 La cinta d'opcions</a> <ul>
+<li><a href="../421_modificaci_per_a_tot_access/">4.2.1 Modificació per a tot Access</a> </li>
+<li><a href="../exercici_42/">Exercici 4.2</a></li>
+<li><a href="../422_modificaci_per_a_la_base_de_dades_actual/">4.2.2 Modificació per a la Base de Dades actual</a> </li>
+<li><a href="../exercici_43_voluntari_per_puntuable/">Exercici 4.3 (voluntari però puntuable)</a></li>
+</ul>
+</li>
+<li><a href="../43_el_panell_de_navegaci/">4.3 El panell de navegació</a></li>
+<li><a href="../44_opcions_daplicaci/">4.4 Opcions d'aplicació</a> <ul>
+<li><a href="../exercici_44/">Exercici 4.4</a></li>
+</ul>
+</li>
+<li><a href="../45_el_panell_de_control/">4.5 El panell de control</a> <ul>
+<li><a href="../exercici_45/">Exercici 4.5</a></li>
+</ul>
+</li>
+</ul>
+<p><a href="../part_ii_macros/">« Anterior</a> | <a href="../22_accions_mltiples/">Següent »</a></p>
+<h1 id="21-creacio-duna-macro"><a name="main"></a><strong>2.1 Creació d'una Macro</strong></h1>
+<p>La manera inicial de crear una macro serà en la barra d'eines <strong>Crear</strong> a la dreta del tot, on hi ha un botó per a crear noves Macros o mòduls.</p>
+<p><img alt="ref1" src="21_creaci_duna_macro.002.png" /></p>
+<p>El que se'ns presentarà per a construir la macro serà el següent:</p>
+<p><img alt="ref2" src="21_creaci_duna_macro.003.png" /></p>
+<p>El següent vídeo mostra tot el procés de creació de la primera macro, ben senzilleta.</p>
+<p>Una vegada creada la macro es pot executar amb el botó d'<strong>execució</strong> (si estem editant-la i demanant-nos prèviament que la guardem).</p>
+<p>Si ja està guardada, podem executar-la amb l'opció <strong>"<em>Ejecutar</em>" del menu emergent</strong> (botó de la dreta sobre el nom de la macro), o senzillament fent <strong>doble-clic</strong> damunt d'ella.</p>
+<p>Les coses estaven distribuïdes de forma diferent en Access 2007. Observeu sobretot que els <strong>Noms de macro</strong> (<strong>Submacros</strong>) i <strong>Condicions</strong> (<strong>Si</strong>) estaven dalt, en compte d'estar a la dreta com ara.</p>
+<p><img alt="ref3" src="21_creaci_duna_macro.004.png" /></p>
+<p><img alt="ref2" src="21_creaci_duna_macro.003.png" /></p>
+<h2 id="exercici-21"><strong>Exercici 2.1</strong></h2>
+<p>En la B.D. de l'empresa, feu la macro de la figura de dalt, però amb el <strong>títol</strong> "<strong>Missatge de salutació</strong>". Guardeu-la amb el nom "<strong>Salutació</strong>" i executeu-la.</p>
+<p>Ara ja podrem veure la macro a l'esquerra, en l'apartat de macros. Si no la veieu i esteu segurs que l'heu creada, segurament és perquè Access no està configurat en aquest moment per veure tots els objectes. Trieu l'opció <em>Todos los objetos de Access</em> del Pannell d'exploració (el que hi ha a l'esquerra), com us mostra la següent imatge:</p>
+<p><img alt="ref4" src="21_creaci_duna_macro.005.png" /></p>
+<p>Aquesta macro és del tipus <strong>Macro Independent</strong>, que vol dir que no depén de cap altre objecte, i sempre la tindrem disponible.</p>
+<p>Com ja es va comentar serà molt normal enllaçar la macro amb algun event. Per exemple quan fem clic a un botó d'un formulari.</p>
+<p><img alt="ref2" src="21_creaci_duna_macro.003.png" /></p>
+<h2 id="exercici-22"><strong>Exercici 2.2</strong></h2>
+<p>Creeu-vos un <strong>formulari nou</strong>, sense utilitzar cap assistent de manera que quede en blanc, sense res. S'aconsegueix anant al botó <strong>Diseño de formulario</strong>. Quan el guardeu li poseu el nom "<strong>Botons</strong>". Afegiu un botó de comando (mireu figura), però de moment sense utilitzar l'assistent ("vareta màgica" desactivada; mireu figura). El que volem és traure el missatge de salutació quan fem clic en el botó. Per aconseguir-ho, aneu a les propietats (botó dret sobre el botó, o tenint-lo seleccionat anar a <em>Hoja de Propiedades</em>) a la pestanya "<strong><em>eventos</em></strong>", sobre l'esdeveniment "<strong><em>al hacer clic</em></strong>" trieu la macro <strong>Salutació</strong>. Per acabar, canvieu el rètol <strong>Comando0</strong> per <strong>Saludar</strong>. Ho podeu fer directament sobre el botó, o canviant la propietat "<strong><em>Titulo</em></strong>"</p>
+<p><img alt="ref5" src="21_creaci_duna_macro.006.png" /></p>
+<p><img alt="ref6" src="21_creaci_duna_macro.007.png" /></p>
+<p>Per a poder comprovar el seu funcionament, haurem "d'executar el formulari", és a dir anar de la "<strong><em>Vista Diseño</em></strong>" del Formulari a la "<strong><em>Vista Formulario</em></strong>".</p>
+<p>Ara anem a crear una <strong>Macro</strong> que <strong>no</strong> serà <strong>Independent</strong>, sinó <strong>associada a un objecte</strong>. Ho aprofitarem per veure una manera més ràpida per fer el procés de creació d'una macro associada a un esdeveniment.</p>
+<p><img alt="ref2" src="21_creaci_duna_macro.003.png" /></p>
+<h2 id="exercici-23"><strong>Exercici 2.3</strong></h2>
+<p>Col·loqueu un altre botó, amb el títol <strong>Despedir</strong>. Aneu a la pestanya d'esdeveniments de les propietat. Però en compte de triar la macro en l'esdeveniment "<strong><em>al hacer clic</em></strong>", feu clic als <strong>tres puntets</strong> del costat. Trieu l'opció "<strong><em>Generador de macros</em></strong>". Automàticament va a crear-la. Trieu una altra vegada un quadre de missatge (<strong>CuadroDeMensaje</strong>) i poseu el missatge "<strong>Adéu</strong>". Ara tindrem 2 possibilitats de guardar-la.</p>
+<ul>
+<li>Si apretem l'opció de <strong>Guardar como</strong> l'estarem creant com una <strong>Macro independent</strong> (la veurem en l'apartat de Macros del Pannell d'exploració). És possible que en Access 2013 no ens done aquesta possibilitat.</li>
+<li>Si apretem a l'opció de <strong>Guardar</strong> o quan tanquem la Macro contestem afirmativament la pregunta de <strong><em>¿Desea guardar los cambios realizados en la macro y actualizar la propiedad?</em></strong> l'estarem creant com una <strong>Macro incrustada</strong> en l'objecte actual (que és un botó de comando), i no la veurem en l'apartat de Macros del Pannell d'exploració.</li>
+</ul>
+<p>Trieu aquesta segona possibilitat, i veureu com en l'esdeveniment "<em>al hacer clic</em>" us posarà <strong>[Macro incrustada]</strong></p>
+<p>Ja hem vist dues maneres d'anar a la creació d'una macro. En veurem una tercera, que serà utilitzant l'assistent. L'assistent ens proposarà que triem una de entre les accions més comunes a l'hora d'utilitzar un botó </p>
+<p><img alt="ref2" src="21_creaci_duna_macro.003.png" /></p>
+<h2 id="exercici-24"><strong>Exercici 2.4</strong></h2>
+<p>Col·loqueu un tercer botó però activant prèviament l'assistent ("vareta màgica"). Entre les accions possibles que ens proposa, agrupades per categories, triarem "<strong>Ejecutar macro</strong>", del grup "<strong>Otras</strong>". Presentarà les macros independents creades fins el moment. Triem l'única creada fins el moment, <strong>Salutació</strong>. Podeu posar una imatge en el botó, o un comentari. Deixeu la imatge.</p>
+<p>El resultat ha estat que l'assistent ha creat una <strong>Macro incrustada</strong> que a la seua vegada executa l'acció <strong>Executar Macro</strong>, concretament la macro <strong>Salutació</strong>. Ho podeu comprovar mirant les propietats del botó.</p>
+<p><strong>Nota</strong></p>
+<p>En versions anteriors a Access 2007, que no existien les macros incrustades, l'assistent el que feia era introduir un procediment en Access Basic (unes quantes instruccions).</p>
+<p>Per a editar una macro ja creada: </p>
+<ul>
+<li>si és una macro <strong>independent</strong> es pot fer des del Pannell d'exploració, apretant amb el botó de la dreta damunt de la macro i triant "<em>Vista</em> d<em>iseño</em>", o si està associada a algun event d'un control d'un formulari, fent clic als tres puntets del costat.</li>
+<li>si és una macro <strong>incrustada</strong> només ho podrem fer d'aquesta segona manera. </li>
+</ul>
+<p><a href="../part_ii_macros/">« Anterior</a> | <a href="../22_accions_mltiples/">Següent »</a></p>
+<p>Llicenciat sota la <a href="http://creativecommons.org/licenses/by-nc-nd/2.5/">Llicència Creative Commons Reconeixement NoComercial SenseObraDerivada 2.5</a>
+<strong>Created with an evaluation copy of Aspose.Words. To discover the full versions of our APIs please visit: https://products.aspose.com/words/</strong></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.path", "navigation.indexes", "toc.integrate", "search.highlight", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,725 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
+    
+    
+      
+        <title>23 subconsultes - BD - Bases de Datos</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.eebd395e.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#23-subconsultes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="BD - Bases de Datos" class="md-header__button md-logo" aria-label="BD - Bases de Datos" data-md-component="logo">
+      
+  <img src="../../assets/logocaminas.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            BD - Bases de Datos
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              23 subconsultes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="BD - Bases de Datos" class="md-nav__button md-logo" aria-label="BD - Bases de Datos" data-md-component="logo">
+      
+  <img src="../../assets/logocaminas.png" alt="logo">
+
+    </a>
+    BD - Bases de Datos
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          Tema 1-Introducció
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Tema 1-Introducció
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T01_Introduccio/objectius/" class="md-nav__link">
+        Objectius
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T01_Introduccio/1_fitxers_tradicionals/" class="md-nav__link">
+        1. Fitxers tradicionals
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T01_Introduccio/2_concepte_de_base_de_dades/" class="md-nav__link">
+        2. Concepte de Base de Dades
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T01_Introduccio/3_caracterstiques_desitjables_dun_sgbd/" class="md-nav__link">
+        3. Característiques desitjables d'un SGBD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T01_Introduccio/4_models_de_dades/" class="md-nav__link">
+        4. Models de dades
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T01_Introduccio/5_arquitectura_a_3_nivells/" class="md-nav__link">
+        5. Arquitectura a 3 nivells
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T01_Introduccio/6_llenguatges_del_sgbd/" class="md-nav__link">
+        6. Llenguatges del SGBD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T01_Introduccio/7_classificacions_dels_sgbd/" class="md-nav__link">
+        7. Classificacions dels SGBD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T01_Introduccio/autoavaluaci/" class="md-nav__link">
+        Autoavaluació
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T02_Model_E-R/" class="md-nav__link">
+        Tema 2-Model E/R
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T03_Model_Relacional/" class="md-nav__link">
+        Tema 3- Model Relacional
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T04_Normalitzacio/" class="md-nav__link">
+        Tema 4- Normalització
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T05_Annex_Base/" class="md-nav__link">
+        Tema 5- Annex Base
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T05_Annex_Access/" class="md-nav__link">
+        Tema 5- Annex Access
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T06_SQL_I_PostgreSQL/" class="md-nav__link">
+        Tema 6- SQL I
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Tema 6- SQL II]
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../(BD-T06_SQL_III_PostgreSQL/index.md" class="md-nav__link">
+        Tema 6- SQL III
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../(BD-T07_PLpgSQL/index.md" class="md-nav__link">
+        Tema 7- PLpgSQL
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../(BD-T08_BD_NoSQL/index.md)" class="md-nav__link">
+        Tema 8- BD NoSQL
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p>Bases de Dades</p>
+<ul>
+<li><a href="../">Tema 6: SQL - Consultes avançades (part II)</a></li>
+<li><a href="../21_introducci/">2.1 Introducció</a></li>
+<li><a href="../22_combinacions_de_taules/">2.2 Combinacions de taules</a> </li>
+<li><a href="../221_producte_cartesi/">2.2.1 Producte cartesià</a></li>
+<li><a href="../222_combinaci_interna/">2.2.2 Combinació interna</a> <ul>
+<li><a href="../exercicis/">Exercicis</a></li>
+</ul>
+</li>
+<li><a href="../223_combinaci_externa/">2.2.3 Combinació externa</a> <ul>
+<li><a href="../exercicis0/">Exercicis</a></li>
+</ul>
+</li>
+<li><a href="./">2.3 Subconsultes</a> </li>
+<li><a href="../exercicis1/">Exercicis</a></li>
+<li><a href="../24_consultes_doperacions_de_conjunts/">2.4 Consultes d'operacions de conjunts</a> </li>
+<li><a href="../exercicis2/">Exercicis</a></li>
+<li><a href="../exercicis_de_tot_el_tema_amb_els_resultats/">Exercicis de tot el tema, amb els resultats</a></li>
+</ul>
+<p><a href="../exercicis0/">« Anterior</a> | <a href="../exercicis1/">Següent »</a></p>
+<h1 id="23-subconsultes"><a name="main"></a><strong>2.3 Subconsultes</strong></h1>
+<p>Una subconsulta és una consulta dins d'una altra consulta. Aquesta subconsulta pot tenir tots els elements que hem vist fins ara.</p>
+<p>El lloc on posar una subconsulta dins de la consulta principal pot ser en la clàusual WHERE o en la clàusula HAVING (formant part d'una condició) o en el FROM, i ha d'anar entre parèntesis. Fins i tot es pot posar en el mateix SELECT, és a dir, en les columnes que van després del SELECT.</p>
+<ul>
+<li>Si va en el <strong>FROM</strong>, la subconsulta serà l'origen de les dades, i per tant s'executarà abans i proporcionarà les dades per a la consulta principal.</li>
+<li>Si va en el <strong>WHERE</strong> o el <strong>HAVING</strong> formarà part d'una condició, i així podrem comparar en la consulta principal un camp amb el que torne la subconsulta, per exemple. A banda de les comparacions normals que ja hem vist en el WHERE o el HAVING, podrem posar alguns operadors i predicats especials, com veurem més avant.</li>
+<li>Si va en el mateix <strong>SELECT</strong> normalment serà per a traure un resultat global que no afecta a la resta de la consulta</li>
+</ul>
+<p>Sintaxi en el FROM</p>
+<p>SELECT ... 
+FROM ( <em>Subconsulta</em> ) AS <em>Nom_Subconsulta</em></p>
+<p>Anem a posar un exemple per entendre-ho. Volem traure la mitjana de pobles per comarca. Ho podem fer de la següent manera: primer comptem quants pobles hi ha en cada comarca, i una vegada calculat això traem la mitjana.</p>
+<p>SELECT AVG(quants) 
+FROM (SELECT COUNT(*) AS quants 
+<code></code>FROM POBLACIONS
+<code></code>GROUP BY nom_c) AS S ;</p>
+<p>Observeu que és necessari posar-li un àlias a la columna de la subconsulta (quants) per a poder fer referència a ella en la consulta principal. I per una altra banda, en PostgreSQL les subconsultes que van al FROM han de tenir obligatòriament un àlies. Si no posàrem <strong>... AS S</strong> (o qualsevol altre nom) ens donaria error.</p>
+<p>Com veieu, ja té un nivell de complexitat més que acceptable. Sempre s'executa primer la subconsulta i amb les dades que proporciona, s'executa la consulta principal. Pel grau de complexitat és molt recomanable anar de dins cap a fora, és a dir, pensar bé la subconsulta, fins i tot executar-la per veure si trau el que necessitem (en l'exemple veure si trau el nombre de poblacions de cadascuna de les 34 comarques), i quan estiguem segurs que funciona bé crear la consulta principal.</p>
+<p>Sintaxi en el WHERE o el HAVING</p>
+<p>SELECT ... 
+FROM Taula 
+WHERE camp operador ( <em>Subconsulta</em> )</p>
+<p>Podem observar que el que farem serà comparar algun camp de la taula (o una expressió amb alguna funció) amb el resultat que ve de la subconsulta.</p>
+<p>Abans de veure què podem posar com a operador o com a camp o fins i tot veure uns predicats que podrem utilitzar, posarem un exemple, per clarificar les coses. Intentarem traure les comarques amb una altura superior a la mitjana. Calcular la mitjana de les altures és fàcil, i serà la subconsulta. El que farem serà comparar l'altura de cada població amb aquesta mitjana.</p>
+<p>SELECT *
+FROM POBLACIONS
+WHERE altura &gt; (SELECT AVG(altura) </p>
+<p><code></code>FROM POBLACIONS)</p>
+<p>Si executeu la consulta, veureu que l'altura de tots els pobles és superior a 300,44 que és l'altura mitjana (aproximadament, perquè ho calcula amb molta precisió)</p>
+<p>No hi ha cap problema en posar dues vegades la mateixa taula. Els camps es refereixen a la taula més propera. I funciona perfectament perquè la subconsulta ens torna un únic valor, la mitjana d'altures, i en la consulta principal es compara cada altura amb aquest valor. Posteriorment veurem com solucionar el problema de que la subconsulta torne més d'un valor.</p>
+<p>Els operadors de la condició poden ser de 3 tipus:</p>
+<ul>
+<li><strong>De comparació</strong>. És com l'exemple de dalt, però amb qualsevol operador de comparació. Es compara el camp (o l'expressió) amb el resultat de la subconsulta. Si la subconsulta només torna un valor, no hi ha més problema, però si torna més d'un valor (més d'una fila) de moment seria incorrecte (no es pot comparar un camp amb uns quants valors). Posem un altre exemple per il·lustrar. Traure la població més alta es podria fer d'aquesta manera.</li>
+</ul>
+<p>SELECT *
+FROM POBLACIONS
+WHERE altura = (SELECT MAX(altura) </p>
+<p><code></code>FROM POBLACIONS)</p>
+<p>No hi ha problema perquè la subconsulta torna un valor. Però anem a complicar-la anem a veure les poblacions més altes de cada comarca. Podríem intentar-lo d'aquesta manera:</p>
+<p>SELECT * 
+FROM POBLACIONS
+WHERE altura = (SELECT MAX(altura) </p>
+<p><code></code>FROM POBLACIONS</p>
+<p><code></code>GROUP BY nom_c)</p>
+<p>Però ens donaria el següent error:</p>
+<p><img alt="" src="23_subconsultes.002.png" /></p>
+<p>I és que la subconsulta torna 34 valors (un per cada comarca), i d'aquesta manera no es pot comparar el valor de l'esquerra del igual amb els 34 valors de la dreta. Per a solucionar el problema de quan torna més d'un valor podem utilitzar els predicats <strong>ALL</strong> , <strong>ANY</strong> , <strong>SOME</strong>.</p>
+<ul>
+<li>Si utilitzem <strong>ALL</strong> el resultat serà cert si la comparació és certa amb <strong>TOTS</strong> els valors que torna la subconsulta.</li>
+<li>Si utilitzem <strong>ANY</strong> o <strong>SOME</strong> (que són sinònims) el resultat serà cert si la comparació és certa amb <strong>ALGUN</strong> valor de la subconsulta<strong>.</strong></li>
+</ul>
+<p>En el nostre exemple, segurament ens convindria <strong>ANY</strong></p>
+<p>SELECT * 
+FROM POBLACIONS
+WHERE altura = ANY (SELECT MAX(altura) </p>
+<p><code></code>FROM POBLACIONS</p>
+<p><code></code>GROUP BY nom_c)</p>
+<p>Aquesta consulta no funcionarà bé del tot, ja que seleccionarà totes les poblacions que coincideixen amb alguna de les altures màximes, siguen de la seua comarca o no. Així per exemple, l'altura màxima de la comarca de la <strong>Plana Alta</strong> és la <strong>Serratella,</strong> amb 781 metres, que efectivament apareix al llistat. Però també apareix <strong>Castelló</strong>, que té una altura de 30 metres. I apareix perquè l'altura màxima de la comarca <strong>Ribera Baixa</strong> dóna la casualitat que és 30 metres (Almussafes). Ja dependrem a fer bé aquesta consulta en els exemples posteriors, però per al fet de comparar amb molts valors ens va bé.</p>
+<ul>
+<li><strong>L'operador IN</strong>. No serà problema que la subconsulta torne un valor o molts. La condició serà certa si el valor del camp (o de l'expressió) està entre la llista de valors que torna la subconsulta. També poden utilitzar NOT IN, i la condició serà certa quan el valor del camp no està entre la llista. Per exemple, una altra manera de traure les poblacions que no tenen institut, que la vista en les combinacions externes. En la subconsulta traem els codis de municipi de la taula INSTITUTS, i per tant són els pobles que tenen institut, i en la consulta principal volem els que no estan en aquesta llista</li>
+</ul>
+<p>SELECT *
+FROM POBLACIONS
+WHERE cod_m NOT IN (SELECT cod_m
+<code></code>FROM INSTITUTS)</p>
+<ul>
+<li><strong>L'operador EXISTS</strong>. És segurament el més incòmode. No es compara un camp (o expressió) amb la subconsulta, sinó únicament es posa <strong>[NOT] EXISTS (<em>subconsulta</em>)</strong> . La condició serà certa si la subconsulta torna <strong>alguna fila</strong>, i no serà certa si no torna cap fila. Intentem fer el mateix exemple d'abans, el dels pobles sense institut. Hem d'aconseguir que la subconsulta no tinga cap fila en el cas dels que no tenen institut. De paraula ho podem dir així: volem els pobles per als quals no existeix cap fila en INSTITUTS amb el mateix codi de municipi. Ara ja es pot intuir per on van els tirs:</li>
+</ul>
+<p>SELECT *
+FROM POBLACIONS
+WHERE NOT EXISTS (SELECT *
+<code></code>FROM INSTITUTS
+<code></code>WHERE cod_m= POBLACIONS.cod_m)</p>
+<p>mireu com si en la subconsulta posem un camp (en l'exemple cod_m), si el camp és de la taula (o taules) de la subconsulta, es referirà a ell, per això si volem fer referència a un camp de la taula o taules de la consulta principal hem de posar el nom de la taula davant.</p>
+<p>Sintaxi en el SELECT</p>
+<p>SELECT ... ( <em>Subconsulta</em> )
+FROM Taula</p>
+<p>Anem a posar també un exemple per entendre-ho. Anem a calcular la diferència de l'altura de cada població amb la mitjana. La mitjana és un resultat global indepentent de la resta de la consulta, que en aquest cas és molt senzilla perquè hem d'agafar informació simple de les poblacions. La subconsulta també és molt senzilla, perquè només hem de calcular la mitjana d'altures).</p>
+<p>SELECT nom, altura, altura - (SELECT AVG(altura) FROM POBLACIONS)
+FROM POBLACIONS</p>
+<p>Exemples</p>
+<ol>
+<li><strong>Traure l'altura mitjana de comarca més gran i la més menuda.</strong></li>
+</ol>
+<p>Ens fa falta prèviament l'altura mitjana de cada comarca, i això serà la subconsulta. No oblidem posar un àlias al camp de la subconsulta, per poder fer referència en la consulta principal. I no oblidem tampoc que les subconsultes en el FROM han de tenir àlies.</p>
+<p>SELECT MAX(mitjana),MIN(mitjana)
+FROM (SELECT AVG(altura) AS mitjana
+<code></code>FROM POBLACIONS
+<code></code>GROUP BY nom_c) AS S;</p>
+<ol>
+<li><strong>Traure tota la informació de les poblacions que tenen més de 5 instituts.</strong></li>
+</ol>
+<p>Podem pensar en una subconsulta on estiguen els codis de municipi de les poblacions que tenen més de 5 instituts (es consulta en la teula INSTITUTS agrupant per codi_m i comptant el número de files per a que siga major que 5).</p>
+<p>SELECT *
+FROM POBLACIONS
+WHERE cod_m IN (SELECT cod_m
+<code></code>FROM INSTITUTS
+<code></code>GROUP BY cod_m
+<code></code>HAVING count(*) &gt; 5)</p>
+<ol>
+<li><strong>Traure tota la informació de la població més alta i de la més baixa.</strong></li>
+</ol>
+<p>Ens plantegem 2 subconsultes, la que trau l'altura màxima i la que trau l'altura mínima (en una única sobconsulta ens tornaria valors en 2 columnes, i estaria més complicat). Senzillament serà traure tota la informació de les poblacions que tenen una altura igual al que torna una subconsulta o al que torna l'altra.</p>
+<p>SELECT *
+FROM POBLACIONS
+WHERE altura = (SELECT MAX(altura)
+<code></code>FROM POBLACIONS)
+<code></code>OR altura = (SELECT MIN(altura)
+<code></code>FROM POBLACIONS);</p>
+<ol>
+<li><strong>Traure la població més alta de cada comarca.</strong></li>
+</ol>
+<p>La dificultat està en que ha de ser la màxima de les altures de la seua comarca. Per tant, en la subconsulta hem de fer referència a la comarca en qüestió. Com sempre estem tractant la taula POBLACIONS, tant en la consulta com en la subconsulta, haurem de posar un nom a la de la consulta principal, per poder fer referència a ella des de la subconsulta.</p>
+<p>SELECT *
+FROM POBLACIONS T1
+WHERE altura = (SELECT MAX(altura)
+<code></code>FROM POBLACIONS
+<code></code>WHERE nom_c= T1.nom_c);</p>
+<p>En el resultat obtenim 35 poblacions, quan només hi ha 34 comarques. La raó és que a l'Alcoià, hi ha 2 poblacions amb l'altura màxima (816 metres), per tant el resultat és correcte</p>
+<ol>
+<li><strong>Obtenir el nom de la comarca i la província de les comarques que tenen una altura mitjana més alta que la mitjana de totes les poblacions.</strong></li>
+</ol>
+<p>La subconsulta serà prou senzilla: la mitjana d'altures de les poblacions. En la consulta principal haurem d'agrupar per cada comarca i calcular la mitjana d'altures de les poblacions, i comparar-la amb la mitjana que ens ve de la subconsulta. Com que demana també la província, ens fa falta també la taula COMARQUES, i per tant l'haurem de reunir amb POBLACIONS; en aquesta ocasió ho hem fet posant la condicó en el WHERE.</p>
+<p>SELECT COMARQUES.nom_c, provincia, AVG(altura)
+FROM COMARQUES , POBLACIONS
+WHERE COMARQUES.nom_c=POBLACIONS.nom_c
+GROUP BY COMARQUES.nom_c, provincia
+HAVING AVG(altura) &gt; (SELECT AVG(altura)
+<code></code>FROM POBLACIONS)</p>
+<ol>
+<li><strong>Traure el nom de la comarca amb la província, número de pobles de cadascuna i el percentatge que suposa respecta al total de pobles.</strong></li>
+</ol>
+<p>Tota la informació la podem traure d'una reunió entre les taules COMARQUES i POBLACIONS (per a comptar quants pobles hi ha en cada comarca), però per a poder calcular el percentatge necessitem el número total de poblacions, que el podem calcular amb una senzilla subconsulta. El lloc més còmode és en el SELECT. La reunió l'hem feta en aquesta ocasió amb el USING.</p>
+<p>SELECT COMARQUES.nom_c, provincia, COUNT(cod_m), COUNT (cod_m)*100.0/(SELECT COUNT(*) FROM POBLACIONS)
+<code></code>FROM COMARQUES INNER JOIN POBLACIONS USING(nom_c)
+<code></code>GROUP BY 1,2;</p>
+<p><a href="../exercicis0/">« Anterior</a> | <a href="../exercicis1/">Següent »</a></p>
+<p>Llicenciat sota la <a href="http://creativecommons.org/licenses/by-nc-nd/2.5/">Llicència Creative Commons Reconeixement NoComercial SenseObraDerivada 2.5</a>
+<strong>Created with an evaluation copy of Aspose.Words. To discover the full versions of our APIs please visit: https://products.aspose.com/words/</strong></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.path", "navigation.indexes", "toc.integrate", "search.highlight", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+    
+  </body>
+</html>

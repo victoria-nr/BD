@@ -1,0 +1,720 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
+    
+    
+      
+        <title>11 taules - BD - Bases de Datos</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.eebd395e.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#11-taules" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="BD - Bases de Datos" class="md-header__button md-logo" aria-label="BD - Bases de Datos" data-md-component="logo">
+      
+  <img src="../../assets/logocaminas.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            BD - Bases de Datos
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              11 taules
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="BD - Bases de Datos" class="md-nav__button md-logo" aria-label="BD - Bases de Datos" data-md-component="logo">
+      
+  <img src="../../assets/logocaminas.png" alt="logo">
+
+    </a>
+    BD - Bases de Datos
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          Tema 1-Introducció
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Tema 1-Introducció
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T01_Introduccio/objectius/" class="md-nav__link">
+        Objectius
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T01_Introduccio/1_fitxers_tradicionals/" class="md-nav__link">
+        1. Fitxers tradicionals
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T01_Introduccio/2_concepte_de_base_de_dades/" class="md-nav__link">
+        2. Concepte de Base de Dades
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T01_Introduccio/3_caracterstiques_desitjables_dun_sgbd/" class="md-nav__link">
+        3. Característiques desitjables d'un SGBD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T01_Introduccio/4_models_de_dades/" class="md-nav__link">
+        4. Models de dades
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T01_Introduccio/5_arquitectura_a_3_nivells/" class="md-nav__link">
+        5. Arquitectura a 3 nivells
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T01_Introduccio/6_llenguatges_del_sgbd/" class="md-nav__link">
+        6. Llenguatges del SGBD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T01_Introduccio/7_classificacions_dels_sgbd/" class="md-nav__link">
+        7. Classificacions dels SGBD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T01_Introduccio/autoavaluaci/" class="md-nav__link">
+        Autoavaluació
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T02_Model_E-R/" class="md-nav__link">
+        Tema 2-Model E/R
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T03_Model_Relacional/" class="md-nav__link">
+        Tema 3- Model Relacional
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T04_Normalitzacio/" class="md-nav__link">
+        Tema 4- Normalització
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T05_Annex_Base/" class="md-nav__link">
+        Tema 5- Annex Base
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Tema 5- Annex Access
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T06_SQL_I_PostgreSQL/" class="md-nav__link">
+        Tema 6- SQL I
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BD-T06_SQL_II_PostgreSQL/" class="md-nav__link">
+        Tema 6- SQL II]
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../(BD-T06_SQL_III_PostgreSQL/index.md" class="md-nav__link">
+        Tema 6- SQL III
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../(BD-T07_PLpgSQL/index.md" class="md-nav__link">
+        Tema 7- PLpgSQL
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../(BD-T08_BD_NoSQL/index.md)" class="md-nav__link">
+        Tema 8- BD NoSQL
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p>Bases de Dades</p>
+<ul>
+<li><a href="../">Tema 5 (annex): Access avançat</a></li>
+<li><a href="../objectius/">Objectius</a></li>
+<li><a href="../part_i_prctica_inicial/">Part I: Pràctica inicial</a> </li>
+<li><a href="./">1.1 Taules</a></li>
+<li><a href="../12_consultes/">1.2 Consultes</a></li>
+<li><a href="../13_formularis_i_informes/">1.3 Formularis i Informes</a></li>
+<li><a href="../part_ii_macros/">Part II: Macros</a> </li>
+<li><a href="../21_creaci_duna_macro/">2.1 Creació d'una Macro</a></li>
+<li><a href="../22_accions_mltiples/">2.2 Accions múltiples</a></li>
+<li><a href="../23_submacros/">2.3 Submacros</a></li>
+<li><a href="../24_condicions/">2.4 Condicions</a></li>
+<li><a href="../25_resum_daccions/">2.5 Resum d'accions</a></li>
+<li><a href="../26_resum_desdeveniments/">2.6 Resum d'esdeveniments</a></li>
+<li><a href="../part_iii_mduls_visual_basic/">Part III: Mòduls (Visual Basic)</a> </li>
+<li><a href="../31_creaci_dun_mdul/">3.1 Creació d'un Mòdul</a></li>
+<li><a href="../32_tipus_de_dades_constants_i_variables/">3.2 Tipus de dades, Constants i Variables</a></li>
+<li><a href="../33_tipus_especials/">3.3 Tipus especials</a></li>
+<li><a href="../34_operadors/">3.4 Operadors</a></li>
+<li><a href="../35_funcions_i_procediments/">3.5 Funcions i Procediments</a></li>
+<li><a href="../36_sentncies/">3.6 Sentències</a></li>
+<li><a href="../37_funcions_estndard/">3.7 Funcions estàndard</a></li>
+<li><a href="../38_objectes_especials_propietats_i_mtodes/">3.8 Objectes especials: propietats i mètodes</a></li>
+<li><a href="../part_iv_configurar_laspecte/">Part IV: Configurar l'aspecte</a> </li>
+<li><a href="../41_configurar_la_barra_daccs_rpid/">4.1 Configurar la Barra d'Accés ràpid</a> <ul>
+<li><a href="../exercici_41/">Exercici 4.1</a></li>
+</ul>
+</li>
+<li><a href="../42_la_cinta_dopcions/">4.2 La cinta d'opcions</a> <ul>
+<li><a href="../421_modificaci_per_a_tot_access/">4.2.1 Modificació per a tot Access</a> </li>
+<li><a href="../exercici_42/">Exercici 4.2</a></li>
+<li><a href="../422_modificaci_per_a_la_base_de_dades_actual/">4.2.2 Modificació per a la Base de Dades actual</a> </li>
+<li><a href="../exercici_43_voluntari_per_puntuable/">Exercici 4.3 (voluntari però puntuable)</a></li>
+</ul>
+</li>
+<li><a href="../43_el_panell_de_navegaci/">4.3 El panell de navegació</a></li>
+<li><a href="../44_opcions_daplicaci/">4.4 Opcions d'aplicació</a> <ul>
+<li><a href="../exercici_44/">Exercici 4.4</a></li>
+</ul>
+</li>
+<li><a href="../45_el_panell_de_control/">4.5 El panell de control</a> <ul>
+<li><a href="../exercici_45/">Exercici 4.5</a></li>
+</ul>
+</li>
+</ul>
+<p><a href="../part_i_prctica_inicial/">« Anterior</a> | <a href="../12_consultes/">Següent »</a></p>
+<h1 id="11-taules"><a name="main"></a><strong>1.1 Taules</strong></h1>
+<p>Realitzar les següents qüestions:</p>
+<p><strong>1.1)</strong> Crear una BD en blanc amb el nom <strong>Empresa.accdb</strong></p>
+<p><strong>1.2)</strong> Importar <strong>EMPLEAT</strong> i <strong>DEPARTAMENT</strong> de la Base de Dades <strong>OrEmpresa.accdb</strong> que es proporciona. El següent vídeo us explica com fer la importació </p>
+<p><strong>1.3</strong>) Importar una taula a partir del fitxer XML <strong>Familiar.xml</strong></p>
+<p>Durant la importació haurem de cuidar els següents aspectes:</p>
+<ul>
+<li>La clau principal ha de ser <strong>Dni + Nom</strong></li>
+<li>El camp <strong>Data_n</strong> ha de ser de tipus <strong>Fecha/Hora</strong></li>
+</ul>
+<p>El següent vídeo us explica com fer la importació: </p>
+<p><strong>1.4)</strong> Importar una taula a partir del fitxer de text <strong>PROJECTE.txt</strong>,</p>
+<p>Durant la importació haurem de cuidar els següents aspectes:</p>
+<p><strong>Num_p</strong> : ha de ser numèric i que ocupe un <strong>byte</strong>. Ha de ser <strong>clau principal</strong>.</p>
+<p><strong>Nom_p</strong> : (no res)</p>
+<p><strong>Departament</strong> : numèric <strong>byte</strong>, i el seu valor no pot ser nul (açò últim ho haureu de fer després de la importació)</p>
+<p>El següent vídeo us explica com fer la importació: </p>
+<p><strong>1.5)</strong> Dissenyar la taula <strong>TREBALLA</strong> (observeu l'esquema Relacional per veure la seua estructura). Els camps seran <strong>dni</strong>, <strong>num_p</strong> i <strong>hores</strong>. Els tipus de <strong>dni</strong> i <strong>num_p</strong> venen condicionats per ser claus externes. L'atribut <strong>hores</strong> (de tipus numèric menudet) ha de ser no nul, i major que zero (i per tant el seu valor predeterminat no convé que siga zero). No us oblideu de la clau principal.</p>
+<p><strong>1.6)</strong> Crear <strong>totes</strong> les integritats referencials. Recordeu que la integritat referencial obliga que la clau externa agafe un dels valors ja introduïts de la clau principal on apunta (així per exemple, la fletxa que apunta des del camp <strong><em>Departament</em></strong> de la taula <strong>EMPLEAT</strong> fins el camp <strong><em>Num_d</em></strong> de la taula <strong>DEPARTAMENT</strong> obliga a posar a cada empleat un departament vàlid, és a dir, dels existents en l'actualitat). A més les de <strong>FAMILIAR</strong> i <strong>TREBALLA</strong> han de modificar i esborrar en <strong><em>cascada</em></strong>.</p>
+<p>Segurament la més "complicada" de fer és la reflexiva que marca els supervisors. Per a poder representar-la, en Access s'ha de posar la taula (en aquest cas <strong>EMPLEAT</strong>) 2 vegades i s'arrastra d'una a l'altra. No és que siguen 2 taules, sinó que s'afegeix a les relacions 2 vegades, però és la mateixa taula.</p>
+<p><strong>1.7)</strong> Dissenyar un <strong>formulari</strong> anomenat <strong>Treballa</strong> per a introduir les dades a aquesta taula. Els atributs <strong>Dni</strong> i <strong>Num_p</strong> s'introduiran per mig de <strong><em>quadres combinats</em></strong>, on es visualitzaran respectivament <strong>Dni - Nom</strong> i <strong>Num_p - Nom_p</strong>. L'atribut Hores s'introduirà per mig d'un quadre de text.</p>
+<p>El següent vídeo explica com crear aquest formulari. La dificultat consisteix en definir bé els quadres combinats. Per a poder explicar-lo millor, el primer quadre combinat es crea utilitzant l'assistent de quadre combinat. Després intenta estudiar les propietats més útils. El segon quadre combinat es crea més "a pèl", modificant les propietats més importants.</p>
+<p>Introduïu a continuació les següents dades. Observeu que entre parèntesi està el Dni de l'empleat i el número de projecte, però únicament a nivell informatiu. No ha d'aparéixer en el quadre combinat.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>"dni"</strong></th>
+<th style="text-align: left;"><strong>"Num_p"</strong></th>
+<th style="text-align: left;"><strong>hores</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Llopis Bernat, Jaume (18876543)</td>
+<td style="text-align: left;">Auditoria 98 (2)</td>
+<td style="text-align: left;">10</td>
+</tr>
+<tr>
+<td style="text-align: left;">Folch Mestre, Pilar (18932165)</td>
+<td style="text-align: left;">Auditoria 98 (2)</td>
+<td style="text-align: left;">5</td>
+</tr>
+<tr>
+<td style="text-align: left;">Peris Andreu, Joan (18933333)</td>
+<td style="text-align: left;">Programa comptabilitat (3)</td>
+<td style="text-align: left;">10</td>
+</tr>
+<tr>
+<td style="text-align: left;">Sebastià Broch, Ferran (18934567)</td>
+<td style="text-align: left;">Programa comptabilitat (3)</td>
+<td style="text-align: left;">20</td>
+</tr>
+<tr>
+<td style="text-align: left;">Garrido Vidal, Rosa (18900111)</td>
+<td style="text-align: left;">Control vendes (4)</td>
+<td style="text-align: left;">5</td>
+</tr>
+<tr>
+<td style="text-align: left;">Nebot Aliaga, Carme (18922222)</td>
+<td style="text-align: left;">Control vendes (4)</td>
+<td style="text-align: left;">25</td>
+</tr>
+<tr>
+<td style="text-align: left;">Folch Mestre, Pilar (18932165)</td>
+<td style="text-align: left;">Control vendes (4)</td>
+<td style="text-align: left;">5</td>
+</tr>
+<tr>
+<td style="text-align: left;">Garcia Tomàs, Alícia (18944444)</td>
+<td style="text-align: left;">Control vendes (4)</td>
+<td style="text-align: left;">15</td>
+</tr>
+<tr>
+<td style="text-align: left;">Garrido Vidal, Rosa (18900111)</td>
+<td style="text-align: left;">Recopilació dades (5)</td>
+<td style="text-align: left;">15</td>
+</tr>
+<tr>
+<td style="text-align: left;">Folch Mestre, Pilar (18932165)</td>
+<td style="text-align: left;">Anàlisi estadística (6)</td>
+<td style="text-align: left;">5</td>
+</tr>
+<tr>
+<td style="text-align: left;">Sebastià Broch, Ferran (18934567)</td>
+<td style="text-align: left;">Anàlisi estadística (6)</td>
+<td style="text-align: left;">10</td>
+</tr>
+<tr>
+<td style="text-align: left;">Llopis Bernat, Jaume (18876543)</td>
+<td style="text-align: left;">Estudi rendiment (7)</td>
+<td style="text-align: left;">5</td>
+</tr>
+<tr>
+<td style="text-align: left;">Folch Mestre, Pilar (18932165)</td>
+<td style="text-align: left;">Estudi rendiment (7)</td>
+<td style="text-align: left;">15</td>
+</tr>
+<tr>
+<td style="text-align: left;">Garcia Tomàs, Alícia (18944444)</td>
+<td style="text-align: left;">Estudi rendiment (7)</td>
+<td style="text-align: left;">5</td>
+</tr>
+</tbody>
+</table>
+<p>Però ¿com estaran introduïdes de veritat les dades? ¿Estarà el nom o el Dni? Les dades "reals" les veurem sempre en la taula (en aquest cas <strong>TREBALLA</strong>)</p>
+<p><a href="../part_i_prctica_inicial/">« Anterior</a> | <a href="../12_consultes/">Següent »</a></p>
+<p>Llicenciat sota la <a href="http://creativecommons.org/licenses/by-nc-nd/2.5/">Llicència Creative Commons Reconeixement NoComercial SenseObraDerivada 2.5</a>
+<strong>Created with an evaluation copy of Aspose.Words. To discover the full versions of our APIs please visit: https://products.aspose.com/words/</strong></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.path", "navigation.indexes", "toc.integrate", "search.highlight", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+    
+  </body>
+</html>
