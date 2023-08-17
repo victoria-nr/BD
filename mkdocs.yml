@@ -1,4 +1,4 @@
-sitio_url : https://squidfunk.github.io/mkdocs-material/
+site_url : https://asalvadorc.github.io/BD/
 site_name: BD - Bases de Datos
 theme: 
   name: material
