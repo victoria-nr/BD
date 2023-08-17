@@ -38,5 +38,27 @@ nav:
   - Tema 7- PLpgSQL: (BD-T07_PLpgSQL/index.md
   - Tema 8- BD NoSQL: (BD-T08_BD_NoSQL/index.md)
 
+markdown_extensions:
+  - meta
+  - tables
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - admonition
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - attr_list
+  - md_in_html
+  - footnotes
+
 
    
