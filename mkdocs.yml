@@ -2,6 +2,28 @@ site_name: BD - Bases de Datos
 theme: 
   name: material
   logo: assets/logocaminas.png
+
+  palette: 
+    - media: "(prefers-color-scheme: light)"    
+    # Palette toggle for light mode
+      scheme: default
+      primary: blue
+      accent: green 
+      toggle:
+        icon: material/weather-night
+        name: Cambiar a modo oscuro
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: deep orange
+      toggle:
+        icon: material/weather-sunny
+        name: Cambiar a modo claro
+
+  language: en
+  
   features:
     #  - navigation.tabs
     #  - navigation.sections
@@ -12,21 +34,7 @@ theme:
       - toc.integrate
       - search.highlight
       - content.code.annotation
-      - content.code.copy  
-extra_css:
-  - stylesheets/extra.css
-nav:
-  - Tema 1-Introducció:
-    - Objectius: BD-T01_Introduccio/objectius.md
-    - 1. Fitxers tradicionals: BD-T01_Introduccio/1_fitxers_tradicionals.md
-    - 2. Concepte de Base de Dades: BD-T01_Introduccio/2_concepte_de_base_de_dades.md
-    - 3. Característiques desitjables d'un SGBD: BD-T01_Introduccio/3_caracterstiques_desitjables_dun_sgbd.md
-    - 4. Models de dades: BD-T01_Introduccio/4_models_de_dades.md
-    - 5. Arquitectura a 3 nivells: BD-T01_Introduccio/5_arquitectura_a_3_nivells.md
-    - 6. Llenguatges del SGBD: BD-T01_Introduccio/6_llenguatges_del_sgbd.md
-    - 7. Classificacions dels SGBD: BD-T01_Introduccio/7_classificacions_dels_sgbd.md
-    - Autoavaluació: BD-T01_Introduccio/autoavaluaci.md
-  
+      - content.code.copy 
 
 markdown_extensions:
   - meta
@@ -49,6 +57,23 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - footnotes
+
+extra_css:
+  - stylesheets/extra.css
+nav:
+  - Tema 1-Introducció:
+    - Objectius: BD-T01_Introduccio/objectius.md
+    - 1. Fitxers tradicionals: BD-T01_Introduccio/1_fitxers_tradicionals.md
+    - 2. Concepte de Base de Dades: BD-T01_Introduccio/2_concepte_de_base_de_dades.md
+    - 3. Característiques desitjables d'un SGBD: BD-T01_Introduccio/3_caracterstiques_desitjables_dun_sgbd.md
+    - 4. Models de dades: BD-T01_Introduccio/4_models_de_dades.md
+    - 5. Arquitectura a 3 nivells: BD-T01_Introduccio/5_arquitectura_a_3_nivells.md
+    - 6. Llenguatges del SGBD: BD-T01_Introduccio/6_llenguatges_del_sgbd.md
+    - 7. Classificacions dels SGBD: BD-T01_Introduccio/7_classificacions_dels_sgbd.md
+    - Autoavaluació: BD-T01_Introduccio/autoavaluaci.md
+  
+
+
 
 
    
