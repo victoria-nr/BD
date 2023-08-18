@@ -23,7 +23,7 @@ theme:
         icon: material/weather-sunny
         name: Cambiar a modo claro
 
-  language: ca
+  language: es
 
   features:
      #- navigation.sections
@@ -59,7 +59,7 @@ extra_css:
   - stylesheets/extra.css
 plugins:
   - search:
-      lang: ca
+      lang: es
   - awesome-pages:
       collapse_single_pages: true
 
