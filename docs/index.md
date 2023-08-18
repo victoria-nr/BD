@@ -1,7 +1,7 @@
 ---
-title:  "Bases de Datos"
+title:  "Bases de Dades"
 ---
 
-# ***Bases de Dadess***
+# ***Bases de Dades***
 
 ![ref1](GBD.png)

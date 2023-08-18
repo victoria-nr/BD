@@ -60,7 +60,7 @@ extra_css:
 
 nav:
   - Tema 1-Introducció:
-    - Objectius: BD-T01_Introduccio/Objectius.md
+    - Objectius: BD-T01_Introduccio/objectius.md
     - 1. Fitxers tradicionals: BD-T01_Introduccio/1_fitxers_tradicionals.md
     - 2. Concepte de Base de Dades: BD-T01_Introduccio/2_concepte_de_base_de_dades.md
     - 3. Característiques desitjables d'un SGBD: BD-T01_Introduccio/3_caracterstiques_desitjables_dun_sgbd.md
