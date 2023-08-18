@@ -57,11 +57,6 @@ markdown_extensions:
 
 extra_css:
   - stylesheets/extra.css
-plugins:
-  - search:
-      lang: es
-  - awesome-pages:
-      collapse_single_pages: true
 
 nav:
   - Tema 1-Introducció:
