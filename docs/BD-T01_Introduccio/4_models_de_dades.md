@@ -1,5 +1,4 @@
-Bases de Dades
-
+# **4.Models de dades**
 Per a poder definir l'estructura de la B.D. ens farà falta alguna ferramenta, alguna manera d'expressar el que veiem en el món real.
 
 Un **Model de Dades** serà un conjunt de conceptes que poden servir per a descriure, a distints nivells d'abstracció, l'estructura d'una B.D. A aquesta estructura expressada per mig del model de dades l'anomenarem **esquema**. Caldrà diferenciar entre esquema i les dades concretes que pot tenir la B.D. en un moment determinat (a la qual cosa alguns autors anomenen **estat de la B.D.** o conjunt d'**ocurrències** o **exemplars**).
@@ -13,4 +12,3 @@ Al llarg de la història s'han proposat molts models de dades, tants que s'haura
 [« Anterior](3_caracterstiques_desitjables_dun_sgbd.md) | [Següent »](5_arquitectura_a_3_nivells.md)
 
 Llicenciat sota la [Llicència Creative Commons Reconeixement NoComercial CompartirIgual 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/)
-**Created with an evaluation copy of Aspose.Words. To discover the full versions of our APIs please visit: https://products.aspose.com/words/**

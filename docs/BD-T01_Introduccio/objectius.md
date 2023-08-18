@@ -1,7 +1,4 @@
-Bases de Dades
 
-
-# ![](objectius.002.png)
 # **Objectius**
 Aquest és el tema d'introducció, i per tant de primer contacte amb la matèria. 
 

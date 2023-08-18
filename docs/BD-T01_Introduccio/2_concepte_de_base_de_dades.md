@@ -1,6 +1,5 @@
-Bases de Dades
+# **2.Concepte de Base de Dades**
 Per a millorar els problemes que se'ns presentaven amb els fitxers tradicionals introduirem el concepte de Base de Dades.
-
 
 
 2\.1 Definició
@@ -17,7 +16,7 @@ Un **Sistema Gestor de Bases de Dades** (**SGBD**; en anglès *DataBase Manageme
 
 
 
-![](2_concepte_de_base_de_dades.002.png)
+![ref1](T1_2_1.png)
 
 Per la figura ja veiem que la Base de Dades s'organitza en dos grans blocs, un és el **catàleg** o **diccionari de dades**, on està l'estructura i tipus de les dades. En l'altre estan les pròpies dades. Per tant veiem que l'estructura de les dades va amb la pròpia Base de Dades.
 
@@ -80,4 +79,3 @@ Utilitzen la B.D. de tant en tant, i cada vegada per a obtenir una informació d
 [« Anterior](1_fitxers_tradicionals.md) | [Següent »](3_caracterstiques_desitjables_dun_sgbd.md)
 
 Llicenciat sota la [Llicència Creative Commons Reconeixement NoComercial CompartirIgual 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/)
-**Created with an evaluation copy of Aspose.Words. To discover the full versions of our APIs please visit: https://products.aspose.com/words/**

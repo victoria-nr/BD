@@ -1,5 +1,5 @@
-site_url : https://asalvadorc.github.io/BD/
-site_name: BD - Bases de Datos
+site_url : https://asalvadorc.github.io/BD
+site_name: BD - Bases de Dades
 theme: 
   name: material
   logo: assets/logocaminas.png
@@ -23,19 +23,15 @@ theme:
         icon: material/weather-sunny
         name: Cambiar a modo claro
 
-  language: en
+  language: ca
 
   features:
-    #  - navigation.tabs
-    #  - navigation.sections
-      - navigation.top
-      - navigation.path
+     #- navigation.sections
+    - navigation.top
     #- navigation.expand
-      - navigation.indexes
-      - toc.integrate
-      - search.highlight
-      - content.code.annotation
-      - content.code.copy 
+    - toc.integrate
+    - search.highlight
+    - content.code.annotate
 
 markdown_extensions:
   - meta
@@ -61,9 +57,15 @@ markdown_extensions:
 
 extra_css:
   - stylesheets/extra.css
+plugins:
+  - search:
+      lang: ca
+  - awesome-pages:
+      collapse_single_pages: true
+
 nav:
   - Tema 1-Introducció:
-    - Objectius: BD-T01_Introduccio/objectius.md
+    - Objectius: BD-T01_Introduccio/Objectius.md
     - 1. Fitxers tradicionals: BD-T01_Introduccio/1_fitxers_tradicionals.md
     - 2. Concepte de Base de Dades: BD-T01_Introduccio/2_concepte_de_base_de_dades.md
     - 3. Característiques desitjables d'un SGBD: BD-T01_Introduccio/3_caracterstiques_desitjables_dun_sgbd.md
@@ -71,19 +73,46 @@ nav:
     - 5. Arquitectura a 3 nivells: BD-T01_Introduccio/5_arquitectura_a_3_nivells.md
     - 6. Llenguatges del SGBD: BD-T01_Introduccio/6_llenguatges_del_sgbd.md
     - 7. Classificacions dels SGBD: BD-T01_Introduccio/7_classificacions_dels_sgbd.md
-    - Autoavaluació: BD-T01_Introduccio/autoavaluaci.md
-  - Tema 2-Model E/R: BD-T02_Model_E-R/index.md 
-  - Tema 3- Model Relacional: BD-T03_Model_Relacional/index.md
-  - Tema 4- Normalització: BD-T04_Normalitzacio/index.md
-  - Tema 5- Annex Base: BD-T05_Annex_Base/index.md
-  - Tema 5- Annex Access: BD-T05_Annex_Access/index.md
-  - Tema 6- SQL I: BD-T06_SQL_I_PostgreSQL/index.md
-  - Tema 6- SQL II: BD-T06_SQL_II_PostgreSQL/index.md  
-  - Tema 6- SQL III: BD-T06_SQL_III_PostgreSQL/index.md
-  - Tema 7- PLpgSQL: BD-T07_PLpgSQL/index.md
-  - Tema 8- BD NoSQL: BD-T08_BD_NoSQL/index.md  
+  - Tema 2-Model Entitat-Relació:
+    - Objectius i coneixements previs: BD-T02_Model_E-R/objectius_i_coneixements_previs.md
+    - 1. Introducció: BD-T02_Model_E-R/1_introducci.md
+    - 2. Exemple: BD-T02_Model_E-R/2_exemple.md
+    - 3. Les Entitats del Model E/R: 
+      - Vídeo: BD-T02_Model_E-R/3_les_entitats_del_model_er.md
+      - 3.1 Entitats: 
+         - Descripció: BD-T02_Model_E-R/31_entitats.md
+         - Aplicació a l'exemple: BD-T02_Model_E-R/aplicaci_a_lexemple.md
+      - 3.2 Atributs: 
+          - Descripció: BD-T02_Model_E-R/32_atributs.md
+          - Aplicació a l'exemple: BD-T02_Model_E-R/aplicaci_a_lexemple0.md
+      - 3.3 Dominis: BD-T02_Model_E-R/33_dominis.md
+      - Exercicis: BD-T02_Model_E-R/exercicis.md
+    - 4. Les Relacions del Model E/R: 
+      - BD-T02_Model_E-R/4_les_relacions_del_model_er.md
+      - 4.1 Relació: 
+        - BD-T02_Model_E-R/41_relaci.md
+        - Aplicació a l'exemple: BD-T02_Model_E-R/aplicaci_a_lexemple1.md
+      - 4.2 Atributs de Relació: 
+          - BD-T02_Model_E-R/42_atributs_de_relaci.md
+          - Aplicació a l'exemple: BD-T02_Model_E-R/aplicaci_a_lexemple2.md
+      - 4.3 Tipus de Relació o Cardinalitat:
+          - BD-T02_Model_E-R/43_tipus_de_relaci_o_cardinalitat.md
+          - Aplicació a l'exemple: BD-T02_Model_E-R/aplicaci_a_lexemple3.md
+      - Exercicis: BD-T02_Model_E-R/exercicis0.md
+    - 5. Relacions de grau major que dos: BD-T02_Model_E-R/5_relacions_de_grau_major_que_dos.md
+    - 6. Model E/R Estès: 
+        - BD-T02_Model_E-R/6_model_er_ests.md
+        - 6.1 Cardinalitat màxima i mínima. Participació total.: 
+          - BD-T02_Model_E-R/61_cardinalitat_mxima_i_mnima_participaci_total.md) 
+          - Aplicació a l'exemple: BD-T02_Model_E-R/aplicaci_a_lexemple4.md
+        - 6.2 Entitats dèbils: BD-T02_Model_E-R/62_entitats_dbils.md
+        - 6.3 Generalització i herència: 
+          - BD-T02_Model_E-R/63_generalitzaci_i_herncia.md
+          - Aplicació a l'exemple: BD-T02_Model_E-R/aplicaci_a_lexemple5.md
+    - 7. Restriccions externes: BD-T02_Model_E-R/7_restriccions_externes.md
+    - Exercicis: BD-T02_Model_E-R/exercicis1.md
+    - Informació addicional: BD-T02_Model_E-R/informaci_addicional.md
   
-
-
+  
 
    

@@ -1,6 +1,4 @@
-Bases de Dades
-
-
+# **6.Llenguatges del  SGBD**
 Tant per a la construcció dels distints esquemes (administradors) com per a la posterior utilització per a introduir, modificar, eliminar i consultar dades (tots els usuaris) se li hauran de donar ordres al SGBD. Per tant el SGBD ha de proporcionar uns llenguatges als usuaris per a poder realitzar aquestes accions. Dos seran els grups de llenguatges: 
 
 - Llenguatges de definició. Serviran per a construir els distints esquemes. Podrem distingir:
@@ -28,4 +26,3 @@ Hi ha dues maneres d'aplicar les sentències dels llenguatges.
 [« Anterior](5_arquitectura_a_3_nivells.md) | [Següent »](7_classificacions_dels_sgbd.md)
 
 Llicenciat sota la [Llicència Creative Commons Reconeixement NoComercial CompartirIgual 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/)
-**Created with an evaluation copy of Aspose.Words. To discover the full versions of our APIs please visit: https://products.aspose.com/words/**

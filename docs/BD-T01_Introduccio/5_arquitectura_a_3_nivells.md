@@ -1,8 +1,7 @@
-Bases de Dades
-
+# **5.Arquitectrua a 3 nivells**
 Per a estandarditzar l'arquitectura dels SGBD, el comitè *ANSI/X3/SPARC* va proposar una arquitectura a 3 nivells, per assegurar algunes de les característiques que hem vist com a desitjables, en concret la de la separació entre programes i dades, les múltiples vistes i la utilització d'un catàleg per a la descripció de la B.D. Aquest són els 3 nivells: 
 
-![ref1]
+![ref1](T1_5_1.png)
 
 1. Al **NIVELL INTERN** o **FÍSIC** hi ha un **esquema intern** que descriu l'estructura física d'emmagatzematge de la B.D. S'utilitza un model físic, i descriu tots els detalls per al seu emmagatzematge (on estan els fitxers, quants, estratègies d'accés a les dades, ...). 
 
@@ -24,7 +23,7 @@ També hem de dir que no sempre els SGBD comercials compleixen estrictament aque
 
 Anem a ampliar l'anterior arquitectura a tres nivells per incorporar tot el procés que farem en la construcció d'una B.D. 
 
-![ref2]
+![ref2](T1_5_2.png)
 
 
 
@@ -33,7 +32,4 @@ On hem incorporat, fora de l'arquitectura a 3 nivells, és a dir fora del SGBD, 
 [« Anterior](4_models_de_dades.md) | [Següent »](6_llenguatges_del_sgbd.md)
 
 Llicenciat sota la [Llicència Creative Commons Reconeixement NoComercial CompartirIgual 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/)
-**Created with an evaluation copy of Aspose.Words. To discover the full versions of our APIs please visit: https://products.aspose.com/words/**
 
-[ref1]: 5_arquitectura_a_3_nivells.002.png
-[ref2]: 5_arquitectura_a_3_nivells.003.png

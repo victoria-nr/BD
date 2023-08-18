@@ -1,5 +1,4 @@
-Bases de Dades
-
+# **7.Classificacions dels SGBD**
 Veurem la classificació respecte uns quants criteris.
 
 - Segons el model de dades utilitzat, tindrem els SGBD **relacionals**, jeràrquics i de xarxa. Els dos últims, encara que fa temps van tenir molta importància i aplicació comercial, han quedat antiquats. Nosaltres ens centrarem en els SGBD Relacionals. Últimament han aparegut els **orientats a objectes**, i altres que per no seguir el model relacional s'anomenen **NoSQL** Intentarem veure alguns aspectes en l'últim tema.
@@ -9,4 +8,3 @@ Veurem la classificació respecte uns quants criteris.
 [« Anterior](6_llenguatges_del_sgbd.md) | [Següent »](autoavaluaci.md)
 
 Llicenciat sota la [Llicència Creative Commons Reconeixement NoComercial CompartirIgual 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/)
-**Created with an evaluation copy of Aspose.Words. To discover the full versions of our APIs please visit: https://products.aspose.com/words/**

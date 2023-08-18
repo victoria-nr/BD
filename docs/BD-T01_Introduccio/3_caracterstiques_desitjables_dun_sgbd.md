@@ -1,5 +1,4 @@
-Bases de Dades
-
+# **3.Característiques desitjables d'un SGBD**
 Ja hem vist algunes característiques que han de tenir els SGBD. Anem a completar aquest llista.
 
 - **Control de redundància**. Ja hem comentat que potser siga convenient en algunes ocasions un poc de redundància. Però en cas que hi haja, aquesta ha d'estar controlada. És a dir, el SGBD hauria de proporcionar mecanismes per a controlar les dades que estan duplicades, i que quan una informació s'actualitze en un lloc, automàticament s'actualitze en els altres.
@@ -11,4 +10,3 @@ Ja hem vist algunes característiques que han de tenir els SGBD. Anem a completa
 [« Anterior](2_concepte_de_base_de_dades.md) | [Següent »](4_models_de_dades.md)
 
 Llicenciat sota la [Llicència Creative Commons Reconeixement NoComercial CompartirIgual 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/)
-**Created with an evaluation copy of Aspose.Words. To discover the full versions of our APIs please visit: https://products.aspose.com/words/**

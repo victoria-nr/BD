@@ -1,5 +1,4 @@
-Bases de Dades
-
+# **1.Fitxers tradicionals**
 Els fitxers tradicionals, que són molt útils per a aplicacions menudes i concretes, comencen a donar problemes quan el sistema d'informació va creixent. Anem a veure un exemple que il·lustre l'explicació.
 
 Suposem una empresa menuda que ha informatitzat la informació dels seus empleats. En un principi només volia una informació general d'ells, per a poder tenir uns llistats, enviar cartes a tots, etc. Així es podria plantejar un fitxer on guardar la informació dels empleats: nom, cognoms, DNI, adreça, telèfon i data de naixement. *Tots* els programes que utilitzen el fitxer (en un principi molt pocs) han de tenir la declaració dels camps del fitxer.
