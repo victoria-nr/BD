@@ -1,5 +1,5 @@
 ---
-title:  "Bases de Dades"
+title:  "Bases de Dades."
 ---
 
 # ***Bases de Dades***
